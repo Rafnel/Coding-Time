@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "2334_F2020_Group_Project.exe"
-  "2334_F2020_Group_Project.exe.manifest"
+  "2334_F2020_Group_Project"
   "2334_F2020_Group_Project.pdb"
-  "CMakeFiles/2334_F2020_Group_Project.dir/main.c.obj"
-  "lib2334_F2020_Group_Project.dll.a"
+  "CMakeFiles/2334_F2020_Group_Project.dir/main.c.o"
 )
 
 # Per-language clean rules from dependency scanning.

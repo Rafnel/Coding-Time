@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/zacsh/OneDrive/Desktop/2334 F2020 Group Project/main.c" "C:/Users/zacsh/OneDrive/Desktop/2334 F2020 Group Project/cmake-build-debug/CMakeFiles/2334_F2020_Group_Project.dir/main.c.obj"
+  "/Users/joshuahunter/Desktop/Coding-Time/main.c" "/Users/joshuahunter/Desktop/Coding-Time/cmake-build-debug/CMakeFiles/2334_F2020_Group_Project.dir/main.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
