@@ -1,3 +1,3 @@
 # Coding-Time
 
-This is a test for commiting
+All warfare is based on deception. -Sun Tzu
