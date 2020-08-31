@@ -9,4 +9,12 @@
 /Users/joshuahunter/Desktop/Coding-Time/main.c
 stdio.h
 -
+ctype.h
+-
+stdlib.h
+-
+math.h
+-
+time.h
+-
 

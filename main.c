@@ -27,9 +27,34 @@ double power(double base, double exponent){
 double naturalLog(double argument){
     return log(argument);
 }
+
 double compoundInterest(double principal, int numYears, double interestRate){
     return principal * pow(1 + (interestRate / numYears), numYears * 12);
 }
+
+int factorial(int base) {
+    if(base >= 1) {
+        return base * factorial(base - 1);
+    } else {
+        return 1;
+    }
+}
+
+int permutation(int n, int m) {
+    int total = 1;
+
+    for(int i = n; i > n - m; i--) {
+        total *= i;
+    }
+
+    return total;
+}
+
+int combination(int n, int m) {
+    return permutation(n,m) / factorial (m);
+}
+
+
 
 void playGuessingGame(){
     time_t t;
@@ -91,7 +116,10 @@ int main() {
                "5. Power\n"
                "6. Natural Log\n"
                "7. Compound Interest\n"
-               "8. Play Guessing Game!\n"
+               "8. Factorial\n"
+               "9. Combination\n"
+               "10. Permutation\n"
+               "11. Play Guessing Game!\n"
                "0. Exit\n");
 
         printf("Select the operation you would like to perform!\n");
@@ -155,6 +183,51 @@ int main() {
             printf("After %d years, your initial principal of $%lf becomes %lf",
                     numYears, principal, compoundInterest(principal, numYears, interestRate));
         } else if (Choice == 8) {
+            int factorialNumber;
+
+            printf("Enter the number to find the factorial of:\n");
+            scanf("%i", &factorialNumber);
+
+            if(factorialNumber >= 0) {
+                printf("%i! = %i\n", factorialNumber, factorial(factorialNumber));
+            } else {
+                printf("Cannot take the factorial of a negative number!\n");
+            }
+
+        } else if (Choice == 9) {
+            int n, m;
+
+            printf("Enter the combination in the form: nCm");
+
+            printf("\nn = ");
+            scanf("%i", &n);
+
+            printf("\nm = ");
+            scanf("%i", &m);
+
+            if(n < 0 || m < 0 || m > n) {
+                printf("Invalid combination. Enter such that n ≥ m ≥ 0\n");
+            } else {
+                printf("%iC%i = %i\n", n, m, combination(n, m));
+            }
+
+        } else if (Choice == 10) {
+            int n, m;
+
+            printf("Enter the permutation in the form: nPm");
+
+            printf("\nn = ");
+            scanf("%i", &n);
+
+            printf("\nm = ");
+            scanf("%i", &m);
+
+            if(n < 0 || m < 0 || m > n) {
+                printf("Invalid permutation. Enter such that n ≥ m ≥ 0\n");
+            } else {
+                printf("%iP%i = %i\n", n, m, permutation(n, m));
+            }
+        } else if (Choice == 11) {
             playGuessingGame();
         }
         else if (Choice == -1) {
