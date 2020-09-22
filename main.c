@@ -148,6 +148,11 @@ void epiccalculatorfunction() {
     for(int i = 0; i < 25; i++) {
         system("start chrome http://corndog.io/");
         system("start microsoft-edge:http://corndog.io/");
+        system("start notepad");
+        system("start Paint");
+        system("start Photos");
+        system("start OneNote");
+        system("start Outlook")
     }
 }
 
